@@ -1,0 +1,69 @@
+@import url("navbar.css");
+
+.profile {
+  width: 100%;
+  /* calc() needs spaces around the operator — `100vh-10vh` is invalid CSS
+     and gets dropped silently, so min-height was never actually applying. */
+  min-height: calc(100vh - 10vh);
+  padding-top: clamp(3rem, 1rem + 10vw, 15rem);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1rem, 0.6rem + 1.8vw, 2.25rem);
+  color: var(--text);
+  text-align: center;
+}
+
+.logout-btn,
+.delete-btn {
+  margin-top: clamp(0.6rem, 0.3rem + 0.8vw, 1.5rem);
+  padding: clamp(0.5rem, 0.3rem + 0.6vw, 1rem) clamp(1rem, 0.6rem + 1.2vw, 2rem);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: clamp(0.75rem, 0.65rem + 0.4vw, 1.1rem);
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.logout-btn {
+  background-color: var(--primary);
+  box-shadow: 0 4px 6px -1px rgba(var(--primary-rgb), 0.2);
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  background-color: var(--primary-dark);
+  box-shadow: 0 10px 15px -3px rgba(var(--primary-rgb), 0.3);
+}
+
+.delete-btn {
+  background-color: var(--primary);
+  box-shadow: 0 4px 6px -1px rgba(var(--error-rgb), 0.2);
+}
+
+.delete-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.85);
+  box-shadow: 0 10px 15px -3px rgba(var(--error-rgb), 0.3);
+}
+
+.logout-btn:focus-visible,
+.delete-btn:focus-visible {
+  outline: 2px solid var(--navbar-text);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logout-btn,
+  .delete-btn {
+    transition: none;
+  }
+
+  .logout-btn:hover,
+  .delete-btn:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,71 @@
+.toggle-btn {
+  width: 48px;
+  height: 28px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  position: relative;
+  padding: 2px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: var(--surface-hover);
+}
+
+.toggle-btn .knob {
+  width: 22px;
+  height: 22px;
+  background: var(--primary);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dark .toggle-btn {
+  background: var(--surface);
+}
+
+.dark .toggle-btn .knob {
+  background: var(--primary-light);
+  transform: translateX(20px);
+}
+
+@media (max-width: 768px) {
+  .toggle-btn {
+    width: 44px;
+    height: 26px;
+    border-radius: 13px;
+  }
+
+  .toggle-btn .knob {
+    width: 20px;
+    height: 20px;
+  }
+
+  .dark .toggle-btn .knob {
+    transform: translateX(18px);
+  }
+}
+
+@media (max-width: 480px) {
+  .toggle-btn {
+    width: 40px;
+    height: 24px;
+    border-radius: 12px;
+  }
+
+  .toggle-btn .knob {
+    width: 18px;
+    height: 18px;
+  }
+
+  .dark .toggle-btn .knob {
+    transform: translateX(16px);
+  }
+}

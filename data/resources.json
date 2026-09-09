@@ -1,0 +1,179 @@
+{
+  "resources": {
+    "fonts": [
+      {
+        "name": "Poppins",
+        "url": "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap",
+        "stylename": "'Poppins', sans-serif",
+        "text": "A modern sans-serif font with a geometric style, suitable for headings and body text."
+      },
+      {
+        "name": "Roboto",
+        "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap",
+        "stylename": "'Roboto', sans-serif",
+        "text": "A versatile sans-serif font with a clean and professional look, ideal for various design projects."
+      },
+      {
+        "name": "Lora",
+        "url": "https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap",
+        "stylename": "'Lora', serif",
+        "text": "A classic serif font with a touch of modernity, perfect for elegant and readable text."
+      },
+      {
+        "name": "Montserrat",
+        "url": "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap",
+        "stylename": "'Montserrat', sans-serif",
+        "text": "A bold and contemporary sans-serif font, great for headlines and impactful text."
+      },
+      {
+        "name": "Open Sans",
+        "url": "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap",
+        "stylename": "'Open Sans', sans-serif",
+        "text": "A clean and friendly sans-serif font, widely used for web and mobile interfaces."
+      },
+      {
+        "name": "Merriweather",
+        "url": "https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap",
+        "stylename": "'Merriweather', serif",
+        "text": "A highly readable serif font, designed for comfortable reading on screens."
+      },
+      {
+        "name": "Nunito",
+        "url": "https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap",
+        "stylename": "'Nunito', sans-serif",
+        "text": "A rounded sans-serif font with a friendly appearance, suitable for various design contexts."
+      },
+      {
+        "name": "Raleway",
+        "url": "https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap",
+        "stylename": "'Raleway', sans-serif",
+        "text": "An elegant sans-serif font with a clean and modern look, ideal for headings and display text."
+      },
+      {
+        "name": "Source Sans Pro",
+        "url": "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap",
+        "stylename": "'Source Sans Pro', sans-serif",
+        "text": "A highly legible sans-serif font, designed for user interfaces and digital content."
+      }
+    ],
+
+    "color_schemes": [
+      {
+        "name": "Ocean Breeze",
+        "colors": {
+          "primary": "#1E90FF",
+          "secondary": "#00CED1",
+          "background": "#F0F8FF",
+          "text": "#333333"
+        },
+        "text": "A refreshing color scheme inspired by the ocean, featuring cool blues and aquas."
+      },
+      {
+        "name": "Sunset Glow",
+        "colors": {
+          "primary": "#FF4500",
+          "secondary": "#FFD700",
+          "background": "#FFF5E1",
+          "text": "#4B2E2E"
+        },
+        "text": "A warm and vibrant color scheme inspired by sunsets, with fiery oranges and golden yellows."
+      },
+      {
+        "name": "Forest Hues",
+        "colors": {
+          "primary": "#228B22",
+          "secondary": "#8FBC8F",
+          "background": "#F5FFFA",
+          "text": "#2F4F4F"
+        },
+        "text": "A natural color scheme inspired by forests, featuring rich greens and earthy tones."
+      },
+      {
+        "name": "Urban Chic",
+        "colors": {
+          "primary": "#2C3E50",
+          "secondary": "#E74C3C",
+          "background": "#ECF0F1",
+          "text": "#34495E"
+        },
+        "text": "A modern and sophisticated color scheme inspired by urban environments, with sleek darks and bold accents."
+      },
+      {
+        "name": "Pastel Dreams",
+        "colors": {
+          "primary": "#FFB6C1",
+          "secondary": "#87CEFA",
+          "background": "#FFF0F5",
+          "text": "#4B0082"
+        },
+        "text": "A soft and dreamy color scheme featuring gentle pastels and calming hues."
+      },
+      {
+        "name": "Desert Mirage",
+        "colors": {
+          "primary": "#C19A6B",
+          "secondary": "#E7D3A6",
+          "background": "#FAF3E0",
+          "text": "#5A4635"
+        },
+        "text": "A warm and earthy color scheme inspired by desert landscapes, blending sandy browns with soft, sun-washed tones."
+      }
+    ],
+
+    "icons": [
+      {
+        "name": "Font Awesome",
+        "url": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css",
+        "text": "A popular icon library offering a wide range of scalable vector icons for web projects. Used for this website."
+      },
+      {
+        "name": "Material Icons",
+        "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+        "text": "Google's Material Design icon set, providing clean and modern icons for various applications."
+      },
+      {
+        "name": "Ionicons",
+        "url": "https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css",
+        "text": "A set of premium icons designed for use in web, mobile, and desktop applications."
+      },
+      {
+        "name": "Feather Icons",
+        "url": "https://unpkg.com/feather-icons/dist/feather.min.css",
+        "text": "A collection of simple and elegant open-source icons, perfect for minimalist designs."
+      },
+      {
+        "name": "Boxicons",
+        "url": "https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css",
+        "text": "A simple and customizable icon library with a variety of styles and categories."
+      }
+    ],
+
+    "images": [
+      {
+        "name": "Unsplash",
+        "url": "https://unsplash.com/",
+        "text": "A vast collection of high-quality, royalty-free images contributed by photographers worldwide."
+      },
+      {
+        "name": "Pexels",
+        "url": "https://www.pexels.com/",
+        "text": "A popular platform offering free stock photos and videos for personal and commercial use."
+      },
+      {
+        "name": "Pixabay",
+        "url": "https://pixabay.com/",
+        "text": "A comprehensive resource for free images, illustrations, vectors, and videos."
+      },
+      {
+        "name": "StockSnap.io",
+        "url": "https://stocksnap.io/",
+        "text": "A curated collection of beautiful free stock photos with high resolution and diverse categories."
+      },
+      {
+        "name": "Burst by Shopify",
+        "url": "https://burst.shopify.com/",
+        "text": "A free stock photo platform powered by Shopify, offering images tailored for entrepreneurs."
+      }
+    ]
+  }
+}

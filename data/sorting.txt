@@ -1,0 +1,39 @@
+                Type
+
+Frontend
+
+Fullstack
+
+                Features
+
+API
+
+Database
+
+Authentication
+
+Payment
+
+Real-time
+
+Analytics
+
+                Category
+
+Personal
+
+Creative
+
+Productivity
+
+E-commerce
+
+Lifestyle
+
+Health
+
+Education
+
+Finance
+
+Entertainment

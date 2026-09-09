@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --text-secondary: #475569;
+  --navbar-bg: #ffffff;
+  --navbar-text: #1e293b;
+  --border: #e2e8f0;
+  --primary: #6f00ff;
+  --primary-rgb: 111, 0, 255;
+  --primary-light: #8629ff;
+  --primary-dark: #5300be;
+  --accent: #8b5cf6;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --error-rgb: 239, 68, 68;
+  --surface: #ffffff;
+  --surface-hover: #f1f5f9;
+
+  /* Fluid sizing tokens — scale between mobile (360px) and desktop (1440px)
+     instead of redeclaring values at every breakpoint. */
+  --navbar-height: clamp(3.75rem, 6vh + 2rem, 5.5rem);
+  --nav-font-mid: clamp(0.7rem, 0.55rem + 0.6vw, 1.125rem);
+  --nav-font-left: clamp(0.85rem, 0.65rem + 0.8vw, 1.5625rem);
+  --nav-gap-mid: clamp(0.75rem, 0.2rem + 3vw, 2.5rem);
+}
+
+.dark {
+  --bg: #0c1116;
+  --text: #f8fafc;
+  --text-secondary: #94a3b8;
+  --navbar-bg: #000408;
+  --navbar-text: #f1f5f9;
+  --border: #3c454d;
+  --primary: #6f00ff;
+  --primary-rgb: 111, 0, 255;
+  --primary-light: #8629ff;
+  --primary-dark: #5300be;
+  --accent: #a78bfa;
+  --success: #34d399;
+  --warning: #fbbf24;
+  --error: #f87171;
+  --error-rgb: 248, 113, 113;
+  --surface: #1e293b;
+  --surface-hover: #334155;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .link,
+  .link::before {
+    transition: none;
+  }
+}
+
+.navbar {
+  height: var(--navbar-height);
+  width: 100%;
+  background-color: var(--navbar-bg);
+  border-bottom: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: var(--navbar-text);
+}
+
+.nav_left {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: var(--nav-font-left);
+  font-weight: bold;
+}
+
+.nav_mid {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--nav-font-mid);
+  font-weight: 500;
+  gap: var(--nav-gap-mid);
+}
+
+.nav_mid .link:not(:first-child) {
+  position: relative;
+}
+
+/* Divider sits in the middle of the existing flex `gap` on .nav_mid,
+   so the link itself needs no padding — and its underline (width: 100%)
+   now matches the text exactly instead of stretching into the gap. */
+.nav_mid .link:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--nav-gap-mid) / -2);
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 1px;
+  background-color: var(--border);
+}
+
+.nav_right {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1.5rem;
+  font-size: var(--nav-font-mid);
+  font-weight: 500;
+  gap: 1rem;
+}
+
+.nav_right .link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--navbar-text);
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 50%;
+  background-color: var(--navbar-text);
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.link:hover {
+  color: var(--text-secondary);
+}
+
+.link:hover::before {
+  width: 100%;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.link i {
+  margin-right: 5px;
+  font-size: 0.9em;
+}
+
+.active {
+  color: var(--navbar-text);
+  font-weight: 600;
+}
+
+.active::before {
+  width: 100%;
+  background-color: var(--navbar-text);
+}
+
+/* Structural breakpoints — only for changes clamp() can't express:
+   column-width redistribution and hiding the mid-nav dividers. */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 0.5rem;
+  }
+
+  .nav_left {
+    width: 20%;
+    justify-content: center;
+  }
+
+  .nav_mid {
+    width: 60%;
+    padding: 0 1rem;
+  }
+
+  .nav_right {
+    width: 20%;
+    padding-right: 0.75rem;
+    gap: 0.6rem;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 599px) {
+  .navbar {
+    padding: 0;
+    gap: 0.25rem;
+  }
+
+  .nav_left {
+    width: 30%;
+    padding-left: 0.25rem;
+  }
+
+  .nav_mid {
+    width: 40%;
+  }
+
+  .nav_mid .link:not(:first-child)::after {
+    display: none;
+  }
+
+  .nav_right {
+    width: 30%;
+    padding-right: 0.25rem;
+    gap: 0.3rem;
+  }
+
+  .link {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 379px) {
+  .nav_left {
+    width: 40%;
+  }
+
+  .nav_mid {
+    width: 20%;
+  }
+
+  .nav_right {
+    width: 40%;
+  }
+}

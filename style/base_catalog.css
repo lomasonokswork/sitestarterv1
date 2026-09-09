@@ -1,0 +1,579 @@
+@import url("navbar.css");
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+.catalog {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 10vh);
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  overflow: hidden;
+}
+
+.filters {
+  width: 20%;
+  padding: 20px;
+  border-right: 2px solid var(--border);
+}
+
+.filters h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.filter-section {
+  margin-bottom: 2rem;
+  justify-content:center;
+}
+
+.filter-section .filter-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+
+.expand-button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  padding: 0;
+  margin-left: 8px;
+}
+
+.expand-button:hover {
+  opacity: 0.7;
+}
+
+.expand-button svg {
+  width: 20px;
+  height: 20px;
+  stroke: #9ca3af;
+  stroke-width: 2;
+  fill: none;
+  transition: transform 0.2s ease;
+}
+
+.expand-button.collapsed svg {
+  transform: rotate(180deg);
+}
+
+.filter-options {
+  max-height: 500px;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+.filter-options.collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.4rem 0;
+}
+
+.filter-option:hover {
+  color: var(--primary);
+}
+
+.filter-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+.filter-option label {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  user-select: none;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.apply-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+}
+
+.apply-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.clear-btn {
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.clear-btn:hover {
+  background-color: var(--surface-hover);
+  border-color: var(--primary);
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .filters {
+    border-bottom: 2px solid var(--border);
+  }
+}
+
+.catalog-projects {
+  flex: 1;
+  margin: 0;
+  padding: 20px;
+  border-left: 2px solid var(--border);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  align-content: start;
+}
+
+.project {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: rgba(99, 99, 99, 0.15) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.3s ease;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 8px 16px 0px;
+  border-color: var(--primary);
+  background-color: var(--surface-hover);
+}
+.save-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 5px;
+}
+
+.save-btn:hover {
+  transform: scale(1.1);
+}
+
+.save-btn i.fas {
+  color: var(--accent-color, #8b5cf6);
+}
+
+.save-btn i.far {
+  color: var(--text-color, #666);
+}
+
+.name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.desc {
+  font-size: 1rem;
+  font-weight: 650;
+  color: var(--text);
+}
+.description {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+}
+.tag,
+.lang,
+.diff {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.tags,
+.languages,
+.difficulty {
+  font-size: 0.8rem;
+  font-weight: 475;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+.catalog-projects::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .catalog-projects {
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 18px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .catalog {
+    min-height: calc(100vh - 9vh);
+  }
+
+  .catalog-projects {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .filters {
+    width: 22%;
+    padding: 18px;
+  }
+
+  .filters h2 {
+    font-size: 1.3rem;
+  }
+
+  .filter-option label {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .filters {
+    width: 25%;
+  }
+
+  .catalog-projects {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .catalog {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .filters {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid var(--border);
+    padding: 15px;
+    margin: 0;
+  }
+
+  .filters h2 {
+    font-size: 1.2rem;
+  }
+
+  .filter-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .catalog-projects {
+    width: 100%;
+    border-left: none;
+    border-top: 2px solid var(--border);
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+    padding: 15px;
+  }
+
+  .project {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filters {
+    padding: 12px;
+  }
+
+  .filter-section {
+    margin-bottom: 1.2rem;
+  }
+
+  .filter-option label {
+    font-size: 0.8rem;
+  }
+
+  .catalog-projects {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .project {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+
+  .save-btn {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .catalog {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .filters {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .filters h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .filter-section {
+    margin-bottom: 1rem;
+  }
+
+  .expand-button {
+    width: 28px;
+    height: 28px;
+  }
+
+  .expand-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .filter-option label {
+    font-size: 0.75rem;
+  }
+
+  .catalog-projects {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .project {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .name {
+    font-size: 1.1rem;
+  }
+
+  .desc {
+    font-size: 0.9rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .tags,
+  .languages,
+  .difficulty {
+    font-size: 0.7rem;
+  }
+
+  .save-btn {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filters {
+    padding: 8px;
+  }
+
+  .filters h2 {
+    font-size: 1rem;
+  }
+
+  .filter-option {
+    padding: 0.3rem 0;
+  }
+
+  .filter-option label {
+    font-size: 0.7rem;
+  }
+
+  .catalog-projects {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .project {
+    padding: 10px;
+    gap: 6px;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.75rem;
+  }
+
+  .btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .filters {
+    padding: 6px;
+  }
+
+  .filters h2 {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .filter-section {
+    margin-bottom: 0.8rem;
+  }
+
+  .expand-button {
+    width: 24px;
+    height: 24px;
+  }
+
+  .expand-button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .filter-option label {
+    font-size: 0.65rem;
+  }
+
+  .catalog-projects {
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .project {
+    padding: 8px;
+    gap: 5px;
+  }
+
+  .name {
+    font-size: 0.95rem;
+  }
+
+  .desc {
+    font-size: 0.8rem;
+  }
+
+  .description {
+    font-size: 0.7rem;
+  }
+
+  .save-btn {
+    top: 10px;
+    right: 10px;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+.btn {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: ease-in-out 0.2s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(1px) scale(1.04);
+}
+
+.btn:active {
+  transform: translateY(1px) scale(0.96);
+  background-color: var(--primary-dark);
+}
